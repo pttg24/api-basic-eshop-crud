@@ -1,46 +1,34 @@
-﻿@BasicEshopCrud
-
-Feature: Customer Management
-
-  Background:
-    Given the API is running
+﻿Feature: Basic Eshop management
 
   Scenario: Create a new customer
-    When I send a POST request to "/api/customers" with the following data:
-      | FirstName | LastName | Phone       | Email                      |
-      | John      | Doe      | 1234567890  | john.doe@example.com       |
+    Given a customer request is created
+    When the POST request is sent to the api
     Then the response status code should be 201
-    And the response should contain a created customer with the following data:
-      | FirstName | LastName | Phone       | Email                      |
+    And the response should contain a created customer fully populated
 
   Scenario: Get an existing customer by ID
-    Given there is an existing customer with ID 1
-    When I send a GET request to "/api/customers/1"
+    Given a customer request is created
+    When the POST request is sent to the api
+    Then the response status code should be 201
+    When the GET request is sent to the api with the created customer details
     Then the response status code should be 200
-    And the response should contain the customer with the following data:
-      | FirstName | LastName | Phone       | Email                      |
+    And the response should contain a created customer fully populated
 
   Scenario: Update an existing customer
-    Given there is an existing customer with ID 1
-    When I send a PUT request to "/api/customers/1" with the following data:
-      | FirstName | LastName | Phone       | Email                      |
-      | UpdatedJohn | UpdatedDoe | 9999999999 | updated.john.doe@example.com |
+    Given a customer request is created
+    When the POST request is sent to the api
+    Then the response status code should be 201
+    When the PUT request is sent to the api with new customer details
     Then the response status code should be 200
-    And the response should contain the updated customer with the following data:
-      | FirstName   | LastName    | Phone       | Email                        |
+    And the response should contain the updated customer fully populated
 
   Scenario: Delete an existing customer
-    Given there is an existing customer with ID 1
-    When I send a DELETE request to "/api/customers/1"
+    Given a customer request is created
+    When the POST request is sent to the api
+    Then the response status code should be 201
+    When the DELETE request is sent to the api with the created customer details
     Then the response status code should be 204
-    And the customer with ID 1 should no longer exist
-
-
-
-Feature: Product Management
-
-  Background:
-    Given the API is running
+    And the customer should no longer exist
 
   Scenario: Create a new product
     When I send a POST request to "/api/products" with the following data:
@@ -71,13 +59,6 @@ Feature: Product Management
     When I send a DELETE request to "/api/products/1"
     Then the response status code should be 204
     And the product with ID 1 should no longer exist
-
-
-
-Feature: Order Management
-
-  Background:
-    Given the API is running
 
   Scenario: Create a new order
     Given there is an existing customer with ID 1

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BasicEshopCrud.Api.AcceptanceTests.Drivers;
+namespace BasicEshopCrud.Api.IntegrationTests.Drivers;
 
 public class BasicEshopCrudApiDriver
 {

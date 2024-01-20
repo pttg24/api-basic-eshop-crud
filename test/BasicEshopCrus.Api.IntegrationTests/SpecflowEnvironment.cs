@@ -1,4 +1,4 @@
-﻿namespace BasicEshopCrud.Api.AcceptanceTests;
+﻿namespace BasicEshopCrud.Api.IntegrationTests;
 
 public static class SpecflowEnvironment
 {
