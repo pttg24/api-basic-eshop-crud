@@ -1,13 +1,13 @@
 ﻿#nullable enable
 using System.Reflection;
-using BasicEshopCrud.Api.AcceptanceTests.Drivers;
+using BasicEshopCrud.Api.IntegrationTests.Drivers;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using SolidToken.SpecFlow.DependencyInjection;
 
-namespace BasicEshopCrud.Api.AcceptanceTests;
+namespace BasicEshopCrud.Api.IntegrationTests;
 
 public class Startup
 {

@@ -1,6 +1,6 @@
 ﻿#nullable enable
 
-namespace BasicEshopCrud.Api.AcceptanceTests.Drivers;
+namespace BasicEshopCrud.Api.IntegrationTests.Drivers;
 
 public class BasicEshopCrudApiOptions
 {
