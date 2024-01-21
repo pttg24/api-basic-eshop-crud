@@ -8,7 +8,7 @@ public class CustomerResponse
     /// <summary>
     /// customer id
     /// </summary>
-    public string CustomerId { get; }
+    public long? CustomerId { get; }
     /// <summary>
     /// first name
     /// </summary>
@@ -35,7 +35,7 @@ public class CustomerResponse
     /// <param name="phone"></param>
     /// <param name="email"></param>
     public CustomerResponse(
-        string customerId,
+        long? customerId,
         string firstName,
         string lastName,
         string phone,

@@ -1,0 +1,28 @@
+{
+  "Serilog": {
+    "Using": [ "Serilog.Sinks.Console", "Destructurama.JsonNet" ],
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Warning",
+        "System": "Warning",
+        "App.Metrics": "Warning"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "Console",
+      }
+    ],
+    "Destructure": [
+      {
+        "Name": "JsonNetTypes"
+      }
+    ],
+    "Enrich": [
+      "FromLogContext",
+      "WithMachineName",
+      "WithSpan"
+    ]
+  }
+}

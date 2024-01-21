@@ -8,15 +8,15 @@ public class OrderResponse
     /// <summary>
     /// order id
     /// </summary>
-    public string OrderId { get; }
+    public long? OrderId { get; }
     /// <summary>
     /// customer id
     /// </summary>
-    public string CustomerId { get; }
+    public long CustomerId { get; }
     /// <summary>
     /// product id
     /// </summary>
-    public string ProductId { get; }
+    public long ProductId { get; }
     /// <summary>
     /// status
     /// </summary>
@@ -30,9 +30,9 @@ public class OrderResponse
     /// <param name="productId"></param>
     /// <param name="status"></param>
     public OrderResponse(
-        string orderId,
-        string customerId,
-        string productId,
+        long? orderId,
+        long customerId,
+        long productId,
         string status
     )
     {

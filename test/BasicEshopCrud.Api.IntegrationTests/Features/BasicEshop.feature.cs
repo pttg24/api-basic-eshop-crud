@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace BasicEshopCrus.Api.IntegrationTests.Features
+namespace BasicEshopCrud.Api.IntegrationTests.Features
 {
     using TechTalk.SpecFlow;
     using System;
@@ -31,7 +31,7 @@ namespace BasicEshopCrus.Api.IntegrationTests.Features
 #line 1 "BasicEshop.feature"
 #line hidden
         
-        public BasicEshopManagementFeature(BasicEshopManagementFeature.FixtureData fixtureData, BasicEshopCrus_Api_IntegrationTests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public BasicEshopManagementFeature(BasicEshopManagementFeature.FixtureData fixtureData, BasicEshopCrud_Api_IntegrationTests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();

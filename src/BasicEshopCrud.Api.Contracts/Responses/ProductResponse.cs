@@ -8,7 +8,7 @@ public class ProductResponse
     /// <summary>
     /// product id
     /// </summary>
-    public string ProductId { get; }
+    public long? ProductId { get; }
     /// <summary>
     /// name
     /// </summary>
@@ -30,7 +30,7 @@ public class ProductResponse
     /// <param name="description"></param>
     /// <param name="sku"></param>
     public ProductResponse(
-        string productId,
+        long? productId,
         string name,
         string description,
         string sku
