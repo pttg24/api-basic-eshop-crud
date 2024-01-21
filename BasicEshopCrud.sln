@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicEshopCrud.Api.Tests", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicEshopCrud.Api.Contracts", "src\BasicEshopCrud.Api.Contracts\BasicEshopCrud.Api.Contracts.csproj", "{B1B1F270-3E80-47EC-ABDC-8213A57D2B9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicEshopCrud.Api.IntegrationTests", "test\BasicEshopCrud.Api.IntegrationTests\BasicEshopCrud.Api.IntegrationTests.csproj", "{2F9A6193-6BD6-4371-8696-647BE8382CAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicEshopCrud.Api.IntegrationTests", "test\BasicEshopCrud.Api.IntegrationTests\BasicEshopCrud.Api.IntegrationTests.csproj", "{2F9A6193-6BD6-4371-8696-647BE8382CAC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicEshopCrud.Infrastructure", "src\BasicEshopCrud.Infrastructure\BasicEshopCrud.Infrastructure.csproj", "{1AB89405-6E90-43CE-B3DA-ADEEC2697442}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicEshopCrud.Domain", "src\BasicEshopCrud.Domain\BasicEshopCrud.Domain.csproj", "{10387D0B-CA25-4C0F-B9FB-A05245C070F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{2F9A6193-6BD6-4371-8696-647BE8382CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F9A6193-6BD6-4371-8696-647BE8382CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F9A6193-6BD6-4371-8696-647BE8382CAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AB89405-6E90-43CE-B3DA-ADEEC2697442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AB89405-6E90-43CE-B3DA-ADEEC2697442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AB89405-6E90-43CE-B3DA-ADEEC2697442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AB89405-6E90-43CE-B3DA-ADEEC2697442}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10387D0B-CA25-4C0F-B9FB-A05245C070F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10387D0B-CA25-4C0F-B9FB-A05245C070F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10387D0B-CA25-4C0F-B9FB-A05245C070F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10387D0B-CA25-4C0F-B9FB-A05245C070F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

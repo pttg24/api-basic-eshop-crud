@@ -8,11 +8,11 @@ public class OrderRequest
     /// <summary>
     /// customer id
     /// </summary>
-    public string CustomerId { get; }
+    public long CustomerId { get; }
     /// <summary>
     /// product id
     /// </summary>
-    public string ProductId { get; }
+    public long ProductId { get; }
     /// <summary>
     /// status
     /// </summary>
@@ -25,8 +25,8 @@ public class OrderRequest
     /// <param name="productId"></param>
     /// <param name="status"></param>
     public OrderRequest(
-        string customerId,
-        string productId,
+        long customerId,
+        long productId,
         string status
     )
     {
