@@ -46,7 +46,7 @@ public class CustomerRequestBuilder
         return new CustomerRequest(
             _firstName,
             _lastName,
-            _email,
-            _phone);
+            _phone,
+            _email);
     }
 }

@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicEshopCrud.Api.Integrat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicEshopCrud.Infrastructure", "src\BasicEshopCrud.Infrastructure\BasicEshopCrud.Infrastructure.csproj", "{1AB89405-6E90-43CE-B3DA-ADEEC2697442}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicEshopCrud.Domain", "src\BasicEshopCrud.Domain\BasicEshopCrud.Domain.csproj", "{10387D0B-CA25-4C0F-B9FB-A05245C070F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicEshopCrud.Domain", "src\BasicEshopCrud.Domain\BasicEshopCrud.Domain.csproj", "{10387D0B-CA25-4C0F-B9FB-A05245C070F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

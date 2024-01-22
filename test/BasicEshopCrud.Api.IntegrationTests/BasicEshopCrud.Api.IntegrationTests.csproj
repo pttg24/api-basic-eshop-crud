@@ -31,6 +31,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\BasicEshopCrud.Api.Contracts\BasicEshopCrud.Api.Contracts.csproj" />
+    <ProjectReference Include="..\..\src\BasicEshopCrud.Domain\BasicEshopCrud.Domain.csproj" />
+    <ProjectReference Include="..\..\src\BasicEshopCrud.Infrastructure\BasicEshopCrud.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

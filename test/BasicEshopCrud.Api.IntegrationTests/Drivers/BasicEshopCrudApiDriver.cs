@@ -22,9 +22,9 @@ public class BasicEshopCrudApiDriver
         client.DefaultRequestHeaders.Accept.Add(new("application/json"));
     }
 
-    public HttpRequestMessage CreatePostRequest(string requestBody)
+    public HttpRequestMessage CreateCustomerPostRequest(string requestBody)
     {
-        return new HttpRequestMessage(HttpMethod.Post, "v1/payment-details")
+        return new HttpRequestMessage(HttpMethod.Post, "v1/customers")
         {
             Content = new StringContent(requestBody, Encoding.UTF8, "application/json")
         };
@@ -33,5 +33,10 @@ public class BasicEshopCrudApiDriver
     public async Task<HttpResponseMessage> SendRequest(HttpRequestMessage message)
     {
         return await _client.SendAsync(message);
+    }
+
+    public async Task<HttpResponseMessage> GetCustomerRequest(long? id)
+    {
+        return await _client.GetAsync("v1/customers/" + id);
     }
 }

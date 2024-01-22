@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  api:
+    build:
+      context: src/BasicEshopCrud.Api
+      dockerfile: Dockerfile
+      target: base
+    healthcheck:
+        test: "wget -qO- http://localhost:5001/_system/health | grep -c '\"status\": \"Healthy\"' > /dev/null"
+        interval: 3s
+        timeout: 5s
+        retries: 30

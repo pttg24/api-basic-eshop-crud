@@ -6,10 +6,10 @@ This project is an example of a CRUD API to a basic e-commerce model.
 ## Business Workflow
 
 ## Requirements/Deliverables  
-- [x] Product:  
-- [x] Product: 
-- [x] Tech:  
-- [x] Tech:  
+- [x] Product: API to manage a business model with the following entities: customers, orders, products.  
+- [x] Product: Store information
+- [x] Tech: Provide a REST API to manage the proposed model 
+- [x] Tech: Docker available  
 
 ## Technical Summary  
 **Activities**
@@ -24,13 +24,25 @@ This project is an example of a CRUD API to a basic e-commerce model.
 * Docker, Git, Visual Studio 2022 
   
 ### How to Run  
-  
-API - http://localhost:5000/  
 
-Technical decisions, further developments, conclusions.
+* Execute `make api.publish` in the root folder
+
+1) Local
+* Launch the API in visual studio. 
+* Navigate to `https://localhost:7001/_system/health`
+* Navigate to `https://localhost:7001/swagger/index.html`
+
+2) Local with docker
+* (clear docker)
+* Execute `make api.up`
+* API - http://localhost:5001/_system/health
+* API Swagger - `https://localhost:5001/swagger/index.html`
+
+3) Run integration tests
+* (clear docker)
+* Execute `make integration-tests.up`
+
   
 ## Bonus Points  
-- [] Application logging  
-- [] Application metrics
-- [x] Containerization  
-- [x] Build script / CI
+- [x] Containerization - Docker 
+- [x] Makefile
