@@ -1,5 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 using BasicEshopCrud.Api.Extensions;
+using BasicEshopCrud.Api.Healthchecks;
 using BasicEshopCrud.Api.SerializationPolicies;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Serilog;
@@ -42,11 +43,10 @@ void ConfigureHost(WebApplicationBuilder builder)
 
 void ConfigureServices(IServiceCollection services, IConfiguration configuration)
 {
-    //services.AddServiceHealthChecks();
+    services.AddServiceHealthChecks();
     services.AddBasicEshopCrudServices(configuration);
 
     services.AddControllers()
-        //.AddPaymentDetailsController()
         .AddJsonOptions(o =>
         {
             o.JsonSerializerOptions.PropertyNamingPolicy = new SnakeCaseNamingPolicy();
@@ -57,8 +57,6 @@ void ConfigureServices(IServiceCollection services, IConfiguration configuration
 
     services.AddHttpContextAccessor();
 
-    //services.AddObservability(configuration);
-
     services.AddApiVersioning(opt =>
     {
         opt.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
@@ -68,12 +66,6 @@ void ConfigureServices(IServiceCollection services, IConfiguration configuration
     });
 
     services.AddSwaggerGen();
-
-    //services.AddVersionedApiExplorer(setup =>
-    //{
-    //    setup.GroupNameFormat = "'v'VVV";
-    //    setup.SubstituteApiVersionInUrl = true;
-    //});
 
     services.AddEndpointsApiExplorer();
 }
@@ -96,5 +88,5 @@ void ConfigureApplication(WebApplication app)
 
     app.UseRouting();
     app.MapControllers();
-    //app.UseServiceHealthChecks();
+    app.UseServiceHealthChecks();
 }

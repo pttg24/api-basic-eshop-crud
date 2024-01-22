@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  api:
+    networks:
+      - local
+
+  integration-tests:
+    build:
+      context: test/BasicEshopCrud.Api.IntegrationTests
+      dockerfile: Dockerfile
+    environment:
+      - SPECFLOW_ENVIRONMENT=localdocker
+    depends_on:
+      api:
+        condition: service_healthy
+    networks:
+      - local
+
+networks:
+  local:
+    driver: bridge
